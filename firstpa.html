@@ -1,0 +1,231 @@
+<html>
+<head>
+    <title>WORLD OF FOODY</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        
+        body{
+            height: 100%;
+            width:100%;
+            overflow-y: hidden;
+        }
+
+        .main{
+            background-image:url('./pexels-pixabay-326281.jpg');
+            background-size: cover;
+            width: 100% ;
+            height: 100%;
+            color: #b4cfec;
+            font-size: 0.7cm;
+        }
+
+  .navbar{
+            text-align: left;
+            word-spacing: 1%;
+            background-color: #016b5fe1;
+            padding: 13px;
+            padding-left: 10%;
+            height: 5%;
+        }
+        .navbar a{
+            text-decoration: none;
+            color: white;
+            font-size: medium;
+        }
+        .navbar h3{
+            position: absolute;
+            left: 70%;
+            top:0;
+        }
+        .navbar h6{
+            position: absolute;
+            left: 86%;
+        }
+        
+        .city1{
+                position:absolute;
+                cursor: pointer;
+                color: white;
+                width: fit-content;
+                transform: translate(500%,-100%);
+                z-index: 1;
+                font-size: medium;
+            }
+            .table1{
+                position: absolute;
+                background-color: silver;
+                padding: 1%;
+                transform: translate(5%,-35%);
+                color: black;
+                visibility: hidden;
+                opacity: 0;
+                transition: opacity 0.5s;
+                box-shadow: 0px 5px 20px rgba(0,0,0,1);
+                border-radius: 2%;
+            }
+            .table1::before{
+                content: "";
+                position: absolute;
+                left: 5%;
+                top: -25%;
+                transform: translateX(20%);
+                border: 15px solid;
+                border-color: #0000 #0000 silver #0000;
+            }
+            .city1:hover > .table1{
+                top:370%;
+                visibility: visible;
+                opacity: 1;
+            }
+
+        img{
+            position: absolute;
+            z-index: 0;
+            margin-top: 1%;
+            margin-left: 45%;
+        }
+
+        .font{
+            background-color: #607d8be8;
+            border-radius: 10px;
+            height: 200px;
+            width:500px;
+            margin-top: 11%;
+            margin-left: 23%;
+            padding-right: 10%;
+            padding-top: 1%;
+            padding-left: 1%;
+            font-size: 0.5cm;
+            color: #014b42 ;
+            word-spacing: 5px;
+        }
+
+        .select{
+            font-size: 0.7cm;
+            margin-top: 2%;
+            margin-left: 45%;
+            color: #b4cfec;
+            text-decoration: underline solid rgb(255, 255, 255);
+        }
+
+        .state1{
+            background-color: #014b42c0;
+            color: white;
+            border-left: black solid;
+            width: fit-content;
+            padding: 2%;
+            display: block;
+            text-decoration: none;
+        }
+         .city a{
+            text-transform: uppercase;
+            text-decoration: none;
+            padding: 3px;
+            color: #ffffff;
+            position: relative;
+            z-index: 1;
+            transition: all 0.3s linear;
+            overflow:hidden;
+            font-size: large;
+        }
+        .city a::before{
+            content:"";
+            position: absolute;
+            top:0;
+            left:0;
+            background-color: #b4cfec ;
+            width: 100%;
+            height: 100%;
+            transform: translateX(-100%);
+            transition: all 0.3s linear;
+            
+        }
+        .city a:hover:before
+        {
+            transform: translateX(0);
+            z-index: -1;
+        }
+        .city a:hover{
+            color: rgb(9, 26, 41);
+        }
+
+        .con img{
+            height: 4%;
+            width: 2%;
+        }
+    </style>
+</head> 
+   
+<body>
+    <div class="main">
+
+            <div class="navbar">
+             <a href="./firstpa.html">HOME</a>
+                <div class="city1">
+                    <table class="table1">
+                        <tr>
+                            <td><a href="./citysurat.html" style="color:black ;">SURAT</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="./cityahmedabad.html" style="color:black ;">AHMEDABAD</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="./citygandhinagar.html" style="color:black ;">GANDHINAGAR</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="./cityrajkot.html" style="color:black ;">RAJKOT</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="./citykutch.html" style="color:black ;">KUTCH</a></td>
+                        </tr>
+                    </table>
+                    <span>CITY</span>    
+                </div> 
+               <h3> TASTE OF THE GUJARAT</h3>
+                <h6>| FOODY GUJARAT |</h6>
+            </div>
+
+            <div class="image">
+                <img class="img"src="./transparat.png" >
+            </div>
+
+            <div class="font">
+                <p>
+                    TAST OF THE GUJARAT ! This page is helpful for a outsider who wants to search a vegetarian restaurant in a town. Our webpage will be helpful to those people who wants get some vegetarian food. Vegitarian people who migrated here in Gujarat from others states or countries faces problems in searching vegitarian food and in that case our website will allow them to find their choice of food in their city and address detail. Also our website will give information of different HOTELS & FOOD MENU.
+                </p>
+            </div>
+
+            <div class="select">
+                SELECT CITY
+            </div>
+
+            <div>
+                <a href="citysurat.html" class="state1" style="padding-right: 4%; padding-left: 4%; margin-top: 3%; margin-left: 4%;">
+                    SURAT
+                </a>
+                <a href="cityahmedabad.html" class="state1" style="margin-top: -5.6%; margin-left: 24%;">
+                    AHMEDABAD
+                </a>
+                <a href="citygandhinagar.html" class="state1" style="margin-top:-5.6% ; margin-left: 44%;">
+                    GANDHINAGAR
+                </a>
+                <a href="cityrajkot.html" class="state1" style="padding-left: 4%; padding-right: 4%; margin-top:-5.6% ; margin-left: 64%;">
+                    RAJKOT
+                </a>
+                <a href="citykutch.html" class="state1" style="padding-left: 4%; padding-right: 4%; margin-top:-5.6% ; margin-left: 84%;">
+                    KUTCH
+                </a>
+            </div>
+            <div class="con">
+                <h6 style="color:black;" style="position:absolute; top:93.5%"></br></br></br></br></br></br>contact us:</h6></br></br>
+                <img src="./instragram.png" style="left: -38%; position:absolute; top : 93.5%;"/>
+                <img src="./twiteer.png" style="left:-36%; position:absolute; top : 93.5%;"/>
+                <img src="./facebook.png" style="left:-34%; position:absolute; top : 93.5%;"/>
+            </div>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,272 @@
+ *{
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        height: 100%;
+        width:100%;    
+        background-color: teal;
+    }
+    .main{
+        background-image:url('./ras1.jpg');
+        background-size: cover;
+        width: 100% ;
+        height: 100%;
+        color: #b4cfec;
+        font-size: 0.7cm;
+        box-shadow: 0px 5px 20px rgba(0,0,0,1);
+    }
+    
+    .time{
+        position:absolute;
+        cursor: pointer;
+        color: white;
+        font-size: 20px;
+        width: fit-content;
+        transform: translateX(10%);
+        z-index: 1;
+    }
+    .map{
+        position:relative;
+        cursor: pointer;
+        color: white;
+        font-size: 20px;
+        width: fit-content;
+        height:fit-content;
+        transform: translateX(700%);
+        z-index: 1;
+    } 
+    .map iframe{
+        position: absolute;
+        background-color: silver;
+        padding: 1%;
+        transform: translate(-10%,-25%);
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.5s;
+        width:500%;
+        height: 1000%;
+        box-shadow: 0px 5px 20px rgba(0,0,0,1);
+        border-radius: 2%;
+    }
+     .contact{
+        position:relative;
+        cursor: pointer;
+        color: white;
+        font-size: 20px;
+        width: fit-content;
+        transform: translate(1400%,-100%);
+        z-index: 1;
+    }
+    .table1{
+        position: absolute;
+        background-color: silver;
+        padding: 1%;
+        transform: translate(5%,-50%);
+        color: black;
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.5s;
+        box-shadow: 0px 5px 20px rgba(0,0,0,1);
+        border-radius: 2%;
+    }
+    .table1::before{
+        content: "";
+        position: absolute;
+        left: 5%;
+        top: -17%;
+        transform: translateX(20%);
+        border: 15px solid;
+        border-color: #0000 #0000 silver #0000;
+    }
+    .contact:hover > table{
+        top:370%;
+        visibility: visible;
+        opacity: 1;
+    }
+    .map:hover > iframe{
+        top:370%;
+        visibility: visible;
+        opacity: 1;
+    }
+    
+    .card{
+        color: black;
+        width: 50%;
+        height:fit-content;
+        position: relative;
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+        background-color: silver;
+        z-index: 0;
+        transform: translate(35%,17%);
+        text-align: center;
+        padding: 3%;
+        padding-left: 12%;
+    }
+    .main img{
+        border-radius: 10px;
+        box-shadow: 0px 5px 20px rgba(0,0,0,1);
+        position: absolute;
+        transform: translate(35%,90%);
+        width: 25%;
+        height: 35%;
+        z-index: 1;
+    }
+    .item{
+        height: 100%;
+        width: 100%;
+    }
+    .card1{
+        color: black;
+        width: 15%;
+        height:30%;
+        position: relative;
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+        background-color: silver;
+        z-index: 0;
+        text-align: center;
+        padding: 1%;
+    }
+    .card1 img{
+        height: 70%;
+        width: 70%;
+        border-radius: 50%;
+    }
+     .card1 h6{
+        margin-top: 5%;
+    }
+      
+        .abc{
+            height: 100%;
+            width:100%;
+        }
+
+        .maina{
+            width: 100% ;
+            height: 100%;
+            background: #7f9ead;
+        }
+
+        .nav{
+            color: #b4cfec;
+            font-size: 0.7cm;
+            text-align: right;
+            word-spacing: 1%;
+            background-color: #016b5fe1;
+            padding: 13px;
+            padding-right: 60px;
+        }
+
+        .xcard{
+            background: #7f9ead;
+            position: absolute;
+            width: 200px;
+            height: 75px;
+            border-radius: 10px;
+            box-shadow: 0px 5px 20px rgba(0,0,0,0.5);
+            transition: 0.3s;
+            padding: 25px 50px;
+            background-color: silver;
+            cursor: pointer;
+        }
+
+        .xcard:hover{
+            height: 150px;
+        }
+
+        .xcard:hover>.ycontent{
+            opacity: 1;
+            transform: translateY(-75px);
+        }
+
+        .imgbox{
+            position:relative;
+            width: 100%;
+            height: 100%;
+            transform: translateY(-70px);
+            z-index: 1;
+        }
+
+        img{
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0px 5px 20px rgba(0,0,0,0.5);
+        }
+
+        .ycontent{
+            padding: 10px 20px;
+            text-align: center;
+            transform: translateY(-145px);
+            opacity: 0;
+            transition: 0.3s;
+        }
+        .nav1{
+            text-align: left;
+            word-spacing: 1%;
+            background-color: #016b5fe1;
+            padding: 13px;
+            padding-left: 10%;
+            height: 5%;
+        }
+        .nav1 a{
+            text-decoration: none;
+            color: white;
+            font-size: medium;
+        }
+        .nav1 h3{
+            position: absolute;
+            left: 70%;
+            font-size: 0.6cm;
+            top:0;
+        }
+        
+        .city1{
+            position:absolute;
+            cursor: pointer;
+            color: white;
+            width: fit-content;
+            transform: translate(600%,-100%);
+            z-index: 1;
+            font-size: medium;
+        }
+        .table2{
+            position: absolute;
+                background-color: silver;
+                padding: 1%;
+                transform: translate(5%,-35%);
+                color: black;
+                visibility: hidden;
+                opacity: 0;
+                transition: opacity 0.5s;
+                box-shadow: 0px 5px 20px rgba(0,0,0,1);
+                border-radius: 2%;
+            }
+            .table2::before{
+                content: "";
+                position: absolute;
+                left: 5%;
+                top: -25%;
+                transform: translateX(20%);
+                border: 15px solid;
+                border-color: #0000 #0000 silver #0000;
+            }
+            .city1:hover > .table2{
+                top:370%;
+                visibility: visible;
+                opacity: 1;
+            }
+            .con img{
+                height: 4%;
+                width: 2%;
+                top:100%
+            }
+
+        
+    
+
+
+
+
+

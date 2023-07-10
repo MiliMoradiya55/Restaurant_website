@@ -1,0 +1,298 @@
+<html>
+<head>
+<title>restaurant</title>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        height: 100%;
+        width:100%;    
+        background-color: teal;
+    }
+    .main{
+        background-image:url('./ras1.jpg');
+        background-size: cover;
+        width: 100% ;
+        height: 100%;
+        color: #b4cfec;
+        font-size: 0.7cm;
+        box-shadow: 0px 5px 20px rgba(0,0,0,1);
+    }
+    .navbar{
+        text-align: left;
+        word-spacing: 1%;
+        background-color: #000000f3;
+        padding: 1%;
+        padding-left: 15%;
+        padding-top: 2%;
+        height: 5%;
+        font-size: 0.5cm;
+        color: white;
+
+    }
+   
+    .map{
+        position:relative;
+        cursor: pointer;
+        color: white;
+        font-size: 20px;
+        width: fit-content;
+        height:fit-content;
+        transform: translate(700%,-100%);
+        z-index: 1;
+    } 
+    .map iframe{
+        position: absolute;
+        background-color: silver;
+        padding: 1%;
+        transform: translate(-10%,-25%);
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.5s;
+        width:500%;
+        height: 1000%;
+        box-shadow: 0px 5px 20px rgba(0,0,0,1);
+        border-radius: 2%;
+    }
+    .map:hover > iframe{
+        top:370%;
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .contact{
+        position:relative;
+        cursor: pointer;
+        color: white;
+        font-size: 20px;
+        width: fit-content;
+        transform: translate(1200%,-200%);
+        z-index: 1;
+    }
+    .table1{
+        position: absolute;
+        background-color: silver;
+        padding: 1%;
+        transform: translate(5%,-50%);
+        color: black;
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.5s;
+        box-shadow: 0px 5px 20px rgba(0,0,0,1);
+        border-radius: 2%;
+    }
+    .table1::before{
+        content: "";
+        position: absolute;
+        left: 5%;
+        top: -17%;
+        transform: translateX(20%);
+        border: 15px solid;
+        border-color: #0000 #0000 silver #0000;
+    }
+    .contact:hover > table{
+        top:370%;
+        visibility: visible;
+        opacity: 1;
+    }
+
+    
+    .card{
+        color: black;
+        width: 50%;
+        height:fit-content;
+        position: relative;
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+        background-color: silver;
+        z-index: 0;
+        transform: translate(35%,17%);
+        text-align: center;
+        padding: 3%;
+        padding-left: 12%;
+    }
+    .main img{
+        border-radius: 10px;
+        box-shadow: 0px 5px 20px rgba(0,0,0,1);
+        position: absolute;
+        transform: translate(35%,90%);
+        width: 25%;
+        height: 35%;
+        z-index: 1;
+    }
+    
+    .item{
+        height: 100%;
+        width: 100%;
+    }
+    .card1{
+        color: black;
+        width: 15%;
+        height:30%;
+        position: relative;
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+        background-color: silver;
+        z-index: 0;
+        text-align: center;
+        padding: 1%;
+    }
+    .card1 img{
+        height: 70%;
+        width: 70%;
+        border-radius: 50%;
+    }
+    .card1 h6{
+        margin-top: 5%;
+    }
+    .card1 h5{
+        margin-top: 5%;
+    }
+
+script{
+    transform: translateX(-100%);
+}
+
+</style>
+</head>
+<body>
+    <div class="main">
+        
+        <div class="navbar">
+            <p id="switch"></p>
+<script>
+switch (new Date().getDay())
+{
+ case 0:
+      day="SUNDAY:- 10:00 am to 11:00 pm";
+         document.getElementById("switch").innerHTML=day;
+        
+      break;
+ case 1:
+     day="MONDAY:- 10:00 am to 11:00 pm";
+        document.getElementById("switch").innerHTML=day;
+    
+     break;
+case 2:
+    day="TUESDAY:- 10:00 am to 11:00 pm";
+       document.getElementById("switch").innerHTML=day;
+      
+    break;
+ case 3:
+    day="WEDNESDAY:- 10:00 am to 11:00 pm";
+       document.getElementById("switch").innerHTML=day;
+     
+    break;
+ case 4:
+    day="THURSDAY:- 10:00 am to 11:00 pm";
+       document.getElementById("switch").innerHTML=day;
+       
+    break;
+  case 5:
+ day="FRIDAY:- 10:00 am to 11:00 pm";
+    document.getElementById("switch").innerHTML=day;
+   
+ break;
+ case 6:
+ day="SATURDAY:- 10:00 am to 11:00 pm";
+    document.getElementById("switch").innerHTML=day;
+ 
+ break;
+}
+</script>
+             <div class="time">
+                <span style="font-family: calibri light;">Today Opening Time</span>    
+            </div>
+            <div class="map">
+                <span style="font-family: calibri light;">Location</span>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d117360.80259210871!2d72.44225566250003!3d23.18752739999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395c29c350566933%3A0xb2d3952573cba875!2s5868%20Restaurant!5e0!3m2!1sen!2sin!4v1658423119772!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="contact">
+                <table class="table1">
+                    <th>Contact</th>
+                    <tr><td colspan="2">____________________________________</td></tr>
+                    <tr>
+                        <td>Mo.</td>
+                        <td>98920 33793</td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td>info@5856gan.com</td>
+                    </tr>
+                    <tr>
+                        <td>Add</td>
+                        <td>Amba Business Park, behind Trimandir, Adalaj, gandhinagar</td>
+                    </tr>
+                </table>
+                <span style="font-family: calibri light;">Contact</span>    
+            </div>
+        </div>
+
+               
+        <img src="gandhinagar3.jpg"/>
+
+        <div class="card">
+                <h6>ABOUT</h6>
+                <h2>-|5856|-</h2><br>
+                <p>"5856" is all about experience, unique atmosphere is ideal for lunches or evenings out with family or friends. Friendly, knowledgeable staff, quality produce, ambience and atmosphere and a home from home feel. Plain and simple good food, good service and total attention to our customers. Stylish decor, lavish furnishings, flavoursome, great food and friendly service.</p>
+        </div>
+
+    </div><br>
+
+    <div class="item"><br>
+        
+        <center><h1>|Special Dishes|</h1></center><br>
+        
+        <div class="card1" style="transform: translate(20%,10%);">
+            <img id="img1"src="./5658 1.jpg"/><br>
+            <h6>|bell peper panner|</h6>
+            <h6>Rs.295</h6>
+        </div>
+        
+        <div class="card1" style="transform: translate(170%,-90%);">
+            <img id="img1"src="./5658 2.jpg"/><br>
+            <h5>|shahi roll|</h5>
+            <h6>Rs.250</h6>
+        </div>
+        
+        <div class="card1" style="transform: translate(320%,-190%);">
+            <img id="img1"src="./5658 3.jpeg"/><br>
+            <h5>|kaju kadhai|</h5>
+            <h6>Rs.465</h6>
+        </div>
+        
+        <div class="card1" style="transform: translate(470%,-290%);">
+            <img id="img1"src="./5658 4.jpg"/><br>
+            <h5>|paneer chatakedar|</h5>
+            <h6>Rs.390</h6>
+        </div>
+        
+        <div class="card1" style="transform: translate(20%,-260%);">
+            <img id="img1"src="./5658 5.jpg"/><br>
+            <h5>|bell peper pulao|</h5>
+            <h6>Rs.280</h6>
+        </div>
+        
+        <div class="card1" style="transform: translate(170%,-360%);">
+            <img id="img1"src="./5658 6.jpg"/><br>
+            <h5>|masala khichadi|</h5>
+            <h6>Rs.245</h6>
+        </div>
+        
+        <div class="card1" style="transform: translate(320%,-460%);">
+            <img id="img1"src="./5658 7.jpg"/><br>
+            <h5>|hot gulab jamun with ice-cream|</h5>
+            <h6>Rs.295</h6>
+        </div>
+        
+        <div class="card1" style="transform: translate(470%,-560%);">
+            <img id="img1"src="./5658 8.jpg"/><br>
+            <h5>|fruit cream|</h5>
+            <h6>Rs.290</h6>
+        </div>
+    </div>
+    
+</body>
+</html>
